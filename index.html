@@ -3,43 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="在浏览器中将 PPTX 转换为带自定义水印的 PDF" />
-  <title>PPT 水印转换器</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%232563eb'/%3E%3Cpath d='M9 7h10l5 5v13H9z' fill='white'/%3E%3Cpath d='M12 17h9M12 21h7' stroke='%232563eb' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E" />
-  <script type="module" crossorigin src="/assets/index-DoLpihle.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-KtzyMPmc.css">
+  <meta name="description" content="免费、私密地将 PPTX 转换为带自定义水印的 PDF，所有文件均在浏览器本地处理。" />
+  <meta name="theme-color" content="#f6f8ff" />
+  <title>SlideSeal · PPT 水印转换器</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x2='1' y2='1'%3E%3Cstop stop-color='%235b5ff0'/%3E%3Cstop offset='1' stop-color='%233b82f6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Cpath d='M10 8.5h8.8l4.2 4.2v10.8H10z' fill='white' fill-opacity='.96'/%3E%3Cpath d='M18.8 8.5v4.2H23M13 17h7M13 20h5' fill='none' stroke='%235b5ff0' stroke-width='1.7' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <script type="module" crossorigin src="/assets/index-B0onHtn1.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-C_Xaeag6.css">
 </head>
 <body>
-  <header>
-    <div class="bar">
-      <div class="brand"><span class="logo">✦</span><div><b>PPT 水印转换器</b><small>本地处理 · 文件不会上传</small></div></div>
-      <span class="privacy">🔒 文件仅在你的浏览器中处理</span>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#" aria-label="SlideSeal 首页"><span class="logo" aria-hidden="true"><svg viewBox="0 0 28 28"><path d="M8 5.5h8.4l4.6 4.6v12.4H8z"/><path d="M16.4 5.5v4.6H21M11.5 14.8h6M11.5 18h4.2"/></svg></span><span><b>SlideSeal</b><small>PPT 水印转换器</small></span></a>
+      <div class="nav-note"><span class="pulse"></span><span>100% 浏览器本地处理</span></div>
     </div>
   </header>
   <main>
-    <section class="work">
-      <div class="card">
-        <div class="step">第一步</div><h1>上传 PowerPoint</h1>
-        <input id="file" type="file" accept=".pptx" hidden />
-        <button id="drop" class="drop"><span class="upload">⇧</span><strong>点击选择或拖入 PPTX 文件</strong><span id="fileMeta">支持 .pptx，单个文件最大 80MB</span></button>
-      </div>
-      <div class="card">
-        <div class="step">第二步</div><h2>自定义水印</h2>
-        <label>水印文字</label><input id="text" value="仅供预览" maxlength="40" />
-        <div class="grid">
-          <div><label>排列方式</label><div class="modes"><button data-mode="center">居中</button><button data-mode="diagonal">斜向</button><button data-mode="tile" class="active">平铺</button></div></div>
-          <div><label>颜色</label><div class="color"><input id="color" type="color" value="#2563eb" /><span id="colorValue">#2563EB</span></div></div>
-          <div class="setting"><div><label>透明度</label><span id="opacityValue">16%</span></div><input id="opacity" type="range" min="5" max="60" value="16" /></div>
-          <div class="setting"><div><label>字号</label><span id="sizeValue">38px</span></div><input id="size" type="range" min="20" max="80" value="38" /></div>
-          <div class="setting wide"><div><label>旋转角度</label><span id="angleValue">-28°</span></div><input id="angle" type="range" min="-60" max="60" value="-28" /></div>
-        </div>
-      </div>
+    <section class="hero">
+      <div class="eyebrow"><span>✦</span> 简单、快速、保护隐私</div>
+      <h1>PPT 转 PDF，<em>顺手加上专属水印</em></h1>
+      <p>无需安装软件，也不用上传服务器。选择文件、自定义水印，一键生成可分享的 PDF。</p>
+      <div class="hero-points" aria-label="产品特点"><span><i>✓</i> 免费使用</span><span><i>✓</i> 无需登录</span><span><i>✓</i> 文件不离开设备</span></div>
     </section>
-    <aside>
-      <div class="preview-card"><div class="preview-top"><span>效果预览</span><span>第 1 页</span></div><div id="preview" class="preview"><span class="mock-title"></span><span class="mock-line"></span></div><div id="progressWrap" class="progress-wrap" hidden><div><span>正在转换</span><span id="progressText">0%</span></div><progress id="progress" max="100" value="0"></progress></div><button id="convert" class="convert" disabled>⇩ 一键转换并下载 PDF</button><p>复杂动画、视频和少数特殊字体可能会被简化；转换结果以静态页面呈现。</p></div>
-      <div class="chips"><span>本地转换</span><span>自定义水印</span><span>直接下载</span></div>
-    </aside>
+    <section class="app-shell">
+      <div class="editor-column">
+        <article class="panel upload-panel">
+          <div class="panel-heading"><span class="step-number">01</span><div><h2>选择 PowerPoint 文件</h2><p>拖入文件，马上开始准备转换</p></div><span class="format-pill">PPTX</span></div>
+          <input id="file" type="file" accept=".pptx" hidden />
+          <button id="drop" class="drop" type="button">
+            <span class="upload-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 21V8m0 0-5 5m5-5 5 5"/><path d="M8.5 19.5v3.2c0 1.5 1.3 2.8 2.8 2.8h9.4c1.5 0 2.8-1.3 2.8-2.8v-3.2"/></svg></span>
+            <strong>点击选择，或将 PPTX 拖到这里</strong><span id="fileMeta">最大支持 80MB · 文件仅在本地读取</span><span class="select-file">选择文件 <b>→</b></span>
+          </button>
+        </article>
+        <article class="panel settings-panel">
+          <div class="panel-heading"><span class="step-number">02</span><div><h2>设置你的水印</h2><p>每项调整都会同步显示在右侧预览中</p></div></div>
+          <div class="field-block"><label for="text">水印文字</label><div class="text-input-wrap"><input id="text" value="仅供预览" maxlength="40" /><span>最多 40 字</span></div></div>
+          <div class="settings-grid">
+            <div class="field-block mode-field"><label>排列方式</label><div class="modes"><button data-mode="center" type="button"><span class="mode-dot single"></span>居中</button><button data-mode="diagonal" type="button"><span class="mode-dot slash"></span>斜向</button><button data-mode="tile" class="active" type="button"><span class="mode-dot tiled"></span>平铺</button></div></div>
+            <div class="field-block color-field"><label for="color">水印颜色</label><div class="color-control"><input id="color" type="color" value="#5b5ff0" /><span id="colorValue">#5B5FF0</span></div></div>
+            <div class="range-card setting"><div><label for="opacity">透明度</label><output id="opacityValue">16%</output></div><input id="opacity" type="range" min="5" max="60" value="16" /><div class="range-hints"><span>淡</span><span>清晰</span></div></div>
+            <div class="range-card setting"><div><label for="size">文字大小</label><output id="sizeValue">38px</output></div><input id="size" type="range" min="20" max="80" value="38" /><div class="range-hints"><span>小</span><span>大</span></div></div>
+            <div class="range-card setting angle-setting"><div><label for="angle">旋转角度</label><output id="angleValue">-28°</output></div><input id="angle" type="range" min="-60" max="60" value="-28" /><div class="range-hints"><span>-60°</span><span>0°</span><span>60°</span></div></div>
+          </div>
+        </article>
+      </div>
+      <aside class="preview-column">
+        <div class="preview-card">
+          <div class="preview-heading"><div><span class="live-dot"></span><b>实时预览</b></div><span class="page-pill">第 1 页</span></div>
+          <div class="stage"><div id="preview" class="preview"><span class="mock-kicker"></span><span class="mock-title"></span><span class="mock-line line-one"></span><span class="mock-line line-two"></span><span class="mock-art"></span></div></div>
+          <div id="progressWrap" class="progress-wrap" hidden><div><span>正在生成 PDF</span><span id="progressText">0%</span></div><progress id="progress" max="100" value="0"></progress></div>
+          <button id="convert" class="convert" disabled type="button"><svg viewBox="0 0 24 24"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 19h14"/></svg>一键转换并下载 PDF</button>
+          <div class="safe-note"><svg viewBox="0 0 24 24"><path d="M12 3 5.5 6v5.4c0 4.1 2.8 7.9 6.5 9.1 3.7-1.2 6.5-5 6.5-9.1V6z"/><path d="m9.4 12 1.7 1.7 3.6-3.7"/></svg><span><b>文件不会上传</b><small>转换过程完全在你的浏览器中完成</small></span></div>
+        </div>
+        <div class="support-note"><span>提示</span><p>复杂动画、视频及少数特殊字体可能会简化，PDF 将以静态页面呈现。</p></div>
+      </aside>
+    </section>
+    <section class="how-it-works">
+      <span class="section-label">HOW IT WORKS</span><h2>三步完成，简单得刚刚好</h2>
+      <div class="workflow-cards"><div><span>01</span><b>上传 PPTX</b><p>选择电脑或手机中的演示文稿</p></div><i>→</i><div><span>02</span><b>调整水印</b><p>设置文字、颜色、大小与排列</p></div><i>→</i><div><span>03</span><b>下载 PDF</b><p>生成后直接保存到你的设备</p></div></div>
+    </section>
   </main>
+  <footer><span>SlideSeal</span><p>让文件转换更简单，也更安心。</p></footer>
   <div id="toast" role="status"></div>
 </body>
 </html>
